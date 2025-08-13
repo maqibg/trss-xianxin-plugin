@@ -1,8 +1,5 @@
 import plugin from "../../../lib/plugins/plugin.js";
-import common from "../../../lib/common/common.js";
 import fetch from "node-fetch";
-import moment from "moment";
-import lodash from "lodash";
 import fs from "node:fs";
 import xxCfg from "../model/xxCfg.js";
 
@@ -32,15 +29,6 @@ export class tools extends plugin {
       priority: 5000,
       rule: [
         {
-          reg: "^#*赞我$",
-          fnc: "thumbsUpMe",
-        },
-        {
-          reg: "^#*潜水\\s*(踢)?\\s*[0-9]*$",
-          fnc: "lurk",
-          permission: "master",
-        },
-        {
           reg: "^#*大地图\\s*.*$",
           fnc: "map",
         },
@@ -57,78 +45,10 @@ export class tools extends plugin {
       ],
     });
 
-    this.bilibiliPushData = xxCfg.getConfig("bilibili", "push");
     this.pkJsonPath = "./data/pkJson/";
   }
 
-  /**
-   * rule - #赞我
-   * @returns
-   */
-  async thumbsUpMe() {
-    Bot.pickFriend(this.e.user_id).thumbUp(10);
-    this.e.reply("已给你点赞");
-  }
-
-  async lurk() {
-    let days = this.e.msg.replace(/#*潜水\s*(踢)?\s*/g, "").trim() || 0;
-
-    const isKickMember = this.e.msg.indexOf("踢") !== -1;
-
-    let gl = await this.e.group.getMemberMap();
-
-    let msg = [];
-    let users = [];
-
-    for (let [k, v] of gl) {
-      if (days == 0) {
-        if (v.last_sent_time == v.join_time) {
-          //计算相差多少天
-          let diffDay = moment().diff(moment.unix(v.join_time), "day");
-          msg.push(
-            `${v.nickname}(${v.user_id}) 入群${diffDay}天，一直在潜水。`
-          );
-          users.push(v.user_id);
-        }
-      } else {
-        //计算相差多少天
-        let diffDay = moment().diff(moment.unix(v.last_sent_time), "day");
-        if (diffDay >= days) {
-          msg.push(
-            `${v.nickname}(${v.user_id}) 已潜水${diffDay}天了，该出来冒个泡啦！`
-          );
-          users.push(v.user_id);
-        }
-      }
-    }
-
-    let total = msg.length;
-
-    const msgArr = lodash.chunk(msg, 10);
-
-    const groupmsg = msgArr.map((item) => {
-      return item.join("\n");
-    });
-
-    msg = await common.makeForwardMsg(
-      this.e,
-      groupmsg,
-      days
-        ? `潜水超过${days}天的群友共${total}个`
-        : `入群从未发言的群友共${total}个`
-    );
-
-    await this.e.reply(msg);
-
-    if (isKickMember && users.length && this.e.group.is_admin) {
-      for (let index = 0; index < users.length; index++) {
-        const element = users[index];
-        await common.sleep(600);
-        this.e.group.kickMember(element);
-        // await this.addOutGroupBlack(element);
-      }
-    }
-  }
+  
 
   async map() {
     let keyword = this.e.msg.replace(/#*大地图\s*/g, "").trim() || "传送点";
@@ -244,19 +164,6 @@ export class tools extends plugin {
     }
 
     if (validGroupList.length) {
-      await this.e.reply("清理无效b站推送群");
-      let data = this.bilibiliPushData || {};
-      let upKeys = Object.keys(data);
-
-      for (let index = 0; index < upKeys.length; index++) {
-        if (!validGroupList.includes(Number(upKeys[index]))) {
-          console.log(data[upKeys[index]]);
-          delete data[upKeys[index]];
-        }
-      }
-
-      xxCfg.saveSet("bilibili", "push", "config", data);
-
       await this.e.reply("清理群战中无效成员信息");
 
       for (let index = 0; index < validGroupList.length; index++) {
@@ -282,22 +189,7 @@ export class tools extends plugin {
     new Restart(this.e).restart();
   }
 
-  async addOutGroupBlack(user_id) {
-    let blackkey = `Yz:newblackcomers:${this.e.group_id}`;
-
-    let blackcomers = await redis.get(blackkey);
-
-    const { blacks = [] } = blackcomers ? JSON.parse(blackcomers) : {};
-
-    let blackcomersSet = new Set(blacks);
-
-    blackcomersSet.add(user_id);
-
-    await redis.set(
-      blackkey,
-      JSON.stringify({ blacks: Array.from(blackcomersSet) })
-    );
-  }
+  
 
   /** 保存json文件 */
   saveJson(pkArr, group_id) {

@@ -13,10 +13,7 @@ if (!global.segment) {
 const versionData = xxCfg.getdefSet("version", "version");
 
 logger.info(chalk.rgb(0, 190, 255)(`--------------------------`));
-logger.info(chalk.rgb(255 ,225 ,255)(`主要适配trss版 闲心插件 ${versionData[0].version} 初始化~`));
-logger.info(chalk.rgb(255 ,225 ,255)(`仓库地址-珊星雪/snowtafir：`));
-logger.info(chalk.rgb(255, 245, 255)(`https://gitee.com/snowtafir/xianxin-plugin`));
-logger.info(chalk.rgb(255, 245, 255)(`原作者：@闲心/xianxincoder`));
+logger.info(chalk.rgb(255 ,225 ,255)(` 闲心插件已启动 ${versionData[0].
 logger.info(chalk.rgb(0, 190, 255)(`--------------------------`));
 
 const files = fs

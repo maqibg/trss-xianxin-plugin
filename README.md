@@ -1,3 +1,9 @@
+
+
+# 自用精简版
+
+
+
 # 迁移说明：
 
 本插件已经停止维护，B站/微博动态功能现已迁移至 [yuki-plugin](https://github.com/snowtafir/yuki-plugin) 项目，[gitee镜像](https://gitee.com/snowtafir/yuki-plugin)。支持yunzai-v4、yunzai-3。
