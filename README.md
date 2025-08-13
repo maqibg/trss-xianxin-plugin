@@ -34,11 +34,11 @@
 > Gitee：
 
 ```shell
-git clone https://gitee.com/snowtafir/xianxin-plugin.git ./plugins/trss-xianxin-plugin/
+git clone https://github.com/maqibg/trss-xianxin-plugin.git ./plugins/trss-xianxin-plugin/
 ```
 > Github：
 ```shell
-git clone https://github.com/snowtafir/xianxin-plugin.git ./plugins/trss-xianxin-plugin/
+git clone https://github.com/maqibg/trss-xianxin-plugin.git ./plugins/trss-xianxin-plugin/
 ```
 2. 接着在bot目录或插件目录下执行依赖安装即可：
 ```
