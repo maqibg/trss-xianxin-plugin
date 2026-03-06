@@ -1,0 +1,105 @@
+- group: 米游社功能
+  list:
+    - icon: 绑定账号
+      title: "#原神/星铁cos 角色名：#原神cos 刻晴、#星铁cos 克拉拉"
+      desc: 指定角色随机查看cos图片
+    - icon: paimon
+      title: "#原神/星铁cos #原神/星铁cos1 #原神/星铁cos详情"
+      desc: 查看米游社中cos榜，示例：#原神cos、#星铁cos
+    - icon: abyss
+      title: "#原神攻略 xxx、#星铁攻略 xxx"
+      desc: 查询 原神 或 星铁 精选的玩家攻略内容
+    - icon: wiki
+      title: "#原神wiki xxx、#星铁wiki xxx"
+      desc: 查询 原神wiki 或 星铁百科 的内容
+    - icon: 原石
+      title: "#原神cosdby 角色名<br/> #星铁cosdby 西施"
+      desc: 指定角色随机查看大别野cos图片
+    - icon: 纠缠之缘
+      title: "#原神/星铁cosdby #原神/星铁cosdby1 #原神/星铁cosdby详情"
+      desc: 查看米游社中大别野cos榜
+    - icon: abyss
+      title: "#原神/星铁同人 #原神/星铁同人1 #原神/星铁同人详情"
+      desc: 查看米游社中同人榜
+    - icon: 史莱姆
+      title: "#原神同人 xx、#星铁同人 xx"
+      desc: 搜索 原神 或 星铁 的同人内容
+    - icon: team
+      title: "#原神热门话题、#星铁热门话题"
+      desc: 查看米游社中 原神 或 星铁 的热聊话题
+- group: 群战
+  list:
+    - icon: 养成计算
+      title: "#加入群战 #群战信息"
+      desc: 初始化群战信息
+    - icon: 史莱姆
+      title: "#战宝"
+      desc: 战胜战宝获得双倍战力
+    - icon: weapon
+      title: "战@群友 #战@群友"
+      desc: "@一名群友进行群战"
+    - icon: 攻略
+      title: "狂战@群友 #狂战@群友"
+      desc: 战狂(战斗次数最多)的专属技能
+    - icon: sign
+      title: "#逆天改命"
+      desc: 战力最低的专属技能
+    - icon: 记录
+      title: "#战榜"
+      desc: 查看群战rank榜
+    - icon: moster
+      title: "#战狂榜"
+      desc: 查看战斗次数排行榜
+    - icon: role
+      title: "#摆烂榜"
+      desc: 查看战力倒数排行榜
+    - icon: 原石
+      title: "#注销群战"
+      desc: 注销个人群战数据
+- group: 五子棋
+  list:
+    - icon: 打卡
+      title: "#五子棋 "
+      desc: 开局五子棋游戏
+    - icon: ledger
+      title: "落子+字母+数字 落子H8"
+      desc: "五子棋落子"
+    - icon: 养成计算
+      title: "#弃子"
+      desc: "五子棋认输"
+- group: 21点
+  list:
+    - icon: 绑定账号
+      title: "#21点"
+      desc: 开局21点游戏
+    - icon: 纠缠之缘
+      title: "叫牌"
+      desc: "21点叫牌"
+    - icon: ledger
+      title: "停牌"
+      desc: "停止叫牌"
+- group: 闲心小工具
+  list:
+    - icon: team
+      title: "#转发"
+      desc: "私聊bot转发小工具(主人专用)"
+    - icon: role
+      title: "#大地图 xx"
+      desc: "快速查看大地图"
+    - icon: wiki
+      title: "#清理缓存文件"
+      desc: "快速清理缓存文件"
+    - icon: paimon
+      title: "#清理无效数据"
+      desc: "快速清理无效数据"
+- group: 其他指令
+  list:
+    - icon: 问号
+      title: "#闲心插件版本"
+      desc: 查看，最近维护的版本信息
+    - icon: 史莱姆
+      title: "#闲心插件更新"
+      desc: "进行更新闲心插件"
+    - icon: 原石
+      title: "#闲心插件强制更新"
+      desc: "进行强制更新闲心插件"

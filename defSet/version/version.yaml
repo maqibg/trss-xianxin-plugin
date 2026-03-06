@@ -1,0 +1,260 @@
+- {
+    version: 2.0.5,
+    data:
+      [
+        新增自动刷新tempck配置可选项，B站功能添加查看app扫码获取的登录ck的有效状态，<span class="cmd">#我的B站登陆 </span>详细使用方法请查看 "#闲心帮助",
+      ],
+  }
+- {
+    version: 2.0.4,
+    data:
+      [
+        B站功能添加扫码获取B站登录cookie，<span class="cmd">#扫码B站登录 </span>详细使用方法请查看 "#闲心帮助",
+      ],
+  }
+- {
+    version: 2.0.3,
+    data:
+      [
+        米游社功能新增星穹铁道内容，<span class="cmd">#星铁cos/wiki/攻略/同人/热门话题 </span>详细使用方法请查看 "#闲心帮助",
+      ],
+  }
+- {
+    version: 2.0.2,
+    data:
+      [
+        新增微博动态推送功能，<span class="cmd">#订阅微博推送6593199887 </span>通过博主uid进行订阅，微博api限制可能每5次会报错connect ETIMEDOUT，可无视,
+      ],
+  }
+- {
+    version: 2.0.1,
+    data:
+      [
+        B站接口添加 ExClimbWuzhi 过校验，绑定B站ck功能改为可选，<span class="cmd">#绑定B站ck： xxx</span>如果总是无法推送可进行该选项,
+      ],
+  }
+- {
+    version: 2.0.0,
+    data:
+      [
+        添加独立绑定B站ck功能，<span class="cmd">#绑定B站ck： xxx</span>如果不进行绑定B站动态将无法推送,
+      ],
+  }
+- {
+    version: 1.1.6,
+    data:
+      [
+        添加云崽菜单联想功能，<span class="cmd">#任意功能</span>如果不存在但是有类似的功能将会提示,
+        云崽菜单联想功能默认关闭，可通过<span class="cmd">#开启菜单联想</span>开启此功能,
+      ],
+  }
+- {
+    version: 1.1.5,
+    data:
+      [
+        添加<span class="cmd">#清理无效数据</span>清理已退群的up推送，群战退群无效用户,
+        添加<span class="cmd">#清理缓存文件</span>小工具,
+        优化<span class="cmd">(戳|撤|禁|踢)</span>单个字为执行一次，两个重复的字为持久执行,
+        添加<span class="cmd">#大地图 xx</span>快速查看题瓦特大地图,
+        添加<span class="cmd">#潜水</span>查看潜水群友,
+        提供<span class="cmd">#潜水 10</span>查看潜水10天的群友,
+      ],
+  }
+- {
+    version: 1.1.5,
+    data:
+      [
+        添加<span class="cmd">#小视频+关键词+数字</span>查看指定小视频,
+        神秘代码pro支持plus视频源,
+        添加<span class="cmd">#快管删除+内容</span>删除已添加的群管理项,
+        添加<span class="cmd">#快管列表</span>查看已添加的群管理项列表,
+        添加回复消息触发的群管理指令<span class="cmd">戳|撤|禁|踢</span>,
+      ],
+  }
+- {
+    version: 1.1.4,
+    data:
+      [
+        修复B站推送排除关键词功能无效问题,
+        修复B站up无法订阅问题,
+        修复B站直播没有推送问题,
+        支持更多的pro源,
+        处理添加b站推送无法添加问题,
+        添加<span class="cmd">#神秘换源+url</span>一键换源,
+        添加<span class="cmd">神秘指令pro</span>需要ffmpeg支持,
+      ],
+  }
+- {
+    version: 1.1.3,
+    data:
+      [
+        神秘指令单独维护一个文件，方便只禁用神秘指令,
+        神秘代码支持读取本地文件源,
+        添加<span class="cmd">#色榜</span>查看<span class="cmd">#给我点颜色看看</span>积分排名,
+        结束<span class="cmd">#给我点颜色看看</span>对局后展示本轮色块答案,
+        优化色块颜色尽量取深颜色的色块方便观察,
+        调整发送色块右上角数字样式,
+        调整<span class="cmd">#给我点颜色看看</span>结束策略,
+        添加<span class="cmd">#给我点颜色看看</span>小游戏,
+      ],
+  }
+- {
+    version: 1.1.2,
+    data:
+      [
+        修复B站转发的动态如果有头像框会错位问题,
+        添加支持转发内置小指令<span class="cmd">#退群</span>需进入转发模式使用,
+        添加小工具<span class="cmd">#转发 群号</span>机器人转发消息,
+        B站推送图片模式支持转发内容的展示,
+        支持锅巴插件中可配置闲心插件相关设置,
+        修复转发动态报错问题,
+        修复直播动态不展示头像信息问题,
+        B站动态实现图片模式推送,
+        默认使用图片模式推送设置文件中可修改为原来的模式,
+      ],
+  }
+- {
+    version: 1.1.1,
+    data:
+      [
+        修复<span class="cmd">#攻略 月莲</span>等新物品时报错问题,
+        修复全部取消up推送时没有成功取消的问题,
+        修复b站转发动态时间不对问题,
+        b站up推送优化，支持只订阅某个up的几种动态消息,
+        例如(只推送直播动态)：<span class="cmd">#订阅up推送 直播 401742377</span>,
+        可以通过<span class="cmd">#推送up列表</span>查看订阅列表详情,
+        添加<span class="cmd">#21点</span>进行21点小游戏,
+        <span class="cmd">叫牌</span>进行要牌,
+        <span class="cmd">停牌</span>停止要牌，对方开始叫牌,
+      ],
+  }
+- {
+    version: 1.1.0,
+    data:
+      [
+        添加<span class="cmd">#战宝</span>查询/生成战宝玩家,
+        战胜 战宝 玩家获得双倍战力，并有概率成为战宝,
+        战宝玩家被动技能，被别人打败时扣减战力减半,
+        修复特定情况下战败扣减0点战力问题,
+      ],
+  }
+- {
+    version: 1.0.9,
+    data:
+      [
+        支持攻略图片分割发送，加快发送速度并防止图片过大问题,
+        优化攻略如果过大有上传失败的可能时，发送文字信息,
+        修复攻略如果查询到特殊的url导致没有响应问题,
+        修复五子棋六子连珠未胜问题,
+        添加<span class="cmd">#攻略 xxx</span>查询原神精选的玩家攻略内容,
+        添加<span class="cmd">#wiki xxx</span>查询原神wiki的内容,
+        例如：<span class="cmd">#wiki 陌野不识故人</span>查看任务信息,
+        优化wiki链接地址只保留简短有效地址,
+      ],
+  }
+- {
+    version: 1.0.8,
+    data:
+      [
+        添加<span class="cmd">#添加up推送 UID</span>检测up的B站动态进行推送,
+        添加<span class="cmd">#删除up推送 UID</span>删除对应up的B站动态推送,
+        添加<span class="cmd">#up推送列表</span>查看本群添加的up推送列表,
+        添加是否推送转发动态的设置,
+        修复特定情况下没有推送消息问题,
+        彻底修复，添加/删除up推送，不重启机器人不生效问题,
+        添加新的直播消息推送方式(检测到就会推送)，默认还是老方式(要等10分钟后才会推送),
+        <span class="cmd">#添加up推送 uid</span>兼容(订阅|新增|增加)up推送指令,
+      ],
+  }
+- {
+    version: 1.0.7,
+    data:
+      [
+        添加<span class="cmd">狂战@xx</span>战狂(战斗次数最多)的专属技能，每人每天最多用一次,
+        添加<span class="cmd">#战狂榜</span>查看战斗次数排行榜,
+        优化五子棋棋盘，添加原木色背景图,
+      ],
+  }
+- {
+    version: 1.0.6,
+    data:
+      [
+        添加<span class="cmd">#五子棋</span>进行五子棋小游戏,
+        添加<span class="cmd">落子A1</span>进行五子棋落子,
+        添加<span class="cmd">#cosdby</span>系列指令查看大别野的cos图,
+        添加<span class="cmd">#摆烂榜</span>查看战力倒数排行榜,
+        优化如果五子棋开局后一方三分钟没有进行落子操作，那么将超时自动结束,
+        修复五子棋如果一方胜利后无法再次开局问题,
+        优化落子指令字母位置支持小写,
+        当前五子棋小游戏正在逐步开发完善，如遇bug烦请到QQ群(426961091)中反馈,
+      ],
+  }
+- {
+    version: 1.0.5,
+    data:
+      [
+        添加<span class="cmd">#cos 角色名</span>例如<span class="cmd">#cos 刻晴</span>获取指定角色的cos图,
+        <span class="cmd">#cos 角色名</span>支持自定义设置发送单张照片还是一组照片,
+        <span class="cmd">#cos 角色名</span>支持自定义设置随机图库数量最大数,
+        cos配置文件为 - trss-xianxin-plugin/config/mys.set.yaml,
+      ],
+  }
+- {
+    version: 1.0.4,
+    data:
+      [
+        <span class="cmd">#cos</span><span class="cmd">#同人</span>修复私聊转发图片破裂问题，私聊改为分开发送,
+        <span class="cmd">战</span>支持设置每日每人限制挑战次数,
+        <span class="cmd">#战榜</span>支持自定义上榜人数,
+        群战小游戏配置文件为 - trss-xianxin-plugin/config/game.set.yaml,
+      ],
+  }
+- {
+    version: 1.0.3,
+    data:
+      [
+        <span class="cmd">#战狂</span><span class="cmd">#群战信息</span>面板样式优化,
+        <span class="cmd">战</span>改为不支持自己挑战自己,
+        <span class="cmd">#闲心插件更新</span>支持<span class="cmd">#闲心更新</span>指令,
+        <span class="cmd">#闲心插件更新</span>后自动重启云崽bot以完成插件的生效,
+        <span class="cmd">#cos</span><span class="cmd">#同人</span>优化为发送一组完整照片，避免刷屏改为转发的形式,
+      ],
+  }
+- {
+    version: 1.0.2,
+    data:
+      [
+        添加<span class="strong">群战</span>功能,
+        <span class="cmd">#加入群战</span><span class="cmd">#群战信息</span>初始化群战信息，并展示自己的信息,
+        <span class="cmd">战@xx</span>@一名群友进行战斗,
+        <span class="cmd">#战榜</span>查看群战rank榜,
+        <span class="cmd">#战狂</span>查看战榜中战斗次数最多的人,
+        <span class="cmd">#逆天改命</span>战力最低的专属技能，每人每天最多用一次,
+        战力如果差距特别大，进行战力保护无法进行挑战,
+      ],
+  }
+- {
+    version: 1.0.1,
+    data:
+      [
+        添加<span class="cmd">#闲心菜单</span>查看功能列表,
+        添加<span class="cmd">#闲心插件版本</span>展示版本信息,
+        优化版本信息展示的样式,
+        处理只展示最后三个版本的更新信息,
+        兼容<span class="cmd">#闲心版本</span>查看版本信息,
+      ],
+  }
+- {
+    version: 1.0.0,
+    data:
+      [
+        添加<span class="cmd">#闲心插件更新</span>功能,
+        添加<span class="cmd">#cos</span>、<span class="cmd">#同人</span>、<span class="cmd">#热门话题</span>等米游社相关功能,
+        添加<span class="cmd">#xxx生日图片</span>获取留影续佳期生日图片,
+        添加<span class="cmd">#伪造信息</span>、<span class="strong">群消息复读</span>功能,
+        添加<span class="cmd">#赞我</span>功能，为发送指令的QQ点赞,
+        添加<span class="strong">动态图片</span>功能，例如：举牌大佬牛b，返回带文字的举牌图片,
+        添加<span class="cmd">#up</span>功能，查看B站up的具体信息,
+        添加<span class="strong">原神角色生日推送</span>功能,
+      ],
+  }
